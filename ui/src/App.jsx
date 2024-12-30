@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Artist from './pages/Artist';
 import Home from './pages/Home';
 import Artwork from './pages/Artwork';
+import Room from './pages/Room';
 
 function App() {
     return (  
@@ -15,6 +16,7 @@ function App() {
                 <Route path='/' element={<Home/>} />
                 <Route path='/artists' element={<Artist/>} />
                 <Route path='/artworks' element={<Artwork/>} />
+                <Route path='/room' element={<Room/>} />
             </Routes>
         </Router>
     );

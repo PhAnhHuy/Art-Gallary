@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom';
 
 function Navbar() {
     const location = useLocation();
-    const user = false;
+    const user = true;
     const admin = true;
     // const [menu, setMenu] = useState('home');
     if (location.pathname === '/artworks') {

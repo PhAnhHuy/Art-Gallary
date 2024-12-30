@@ -23,7 +23,9 @@ function Artwork() {
                 <div className="flex flex-row justify-center items-center gap-10">
                     <div className="text-2xl underline">Artworks</div>
                     <div className="text-2xl cursor-pointer">About</div>
-                    <button className="w-24 h-10 flex items-center justify-center bg-black text-white rounded-full text-2xl">View</button>
+                    <button 
+                    className="w-24 h-10 flex items-center justify-center bg-black text-white rounded-full text-2xl" 
+                    onClick={() => navigate('/room')}>View</button>
                 </div>
             </div>
             
