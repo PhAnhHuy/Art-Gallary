@@ -1,4 +1,4 @@
-import ArtRoom from "../components/ArtRoom.js";
+import ArtRoom from "../components/ArtRoom.jsx";
 
 function Room() {
     const pexel = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`
@@ -18,7 +18,7 @@ function Room() {
         { position: [2, 0, 2.75], rotation: [0, -Math.PI / 2.5, 0], url: pexel(1738986) }
     ]
     return (
-        <div className="h-screen w-screen bg-yellow-500">
+        <div className="h-[calc(100vh-80px)] mt-[80px] w-screen">
             <ArtRoom images={images} />
         </div>
     );
