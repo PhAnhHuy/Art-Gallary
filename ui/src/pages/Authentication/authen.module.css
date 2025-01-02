@@ -4,3 +4,83 @@
     background-color: aqua;
 }
 
+.title {
+    height: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 180%;
+    font-weight: 520;
+}
+
+.content-wrapper {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.input-container {
+    width: 80%;
+    height: 20%;
+    position: relative;
+
+    label {
+        height: 20%;
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+        height: 70%;
+        border: 1px solid gainsboro;
+        outline: none;
+        border-radius: 15px;
+        padding: 5px 45px 5px 15px;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    
+    + .input-container {
+        margin-top: 7%;
+    }
+}
+
+.form-button {  
+    user-select: none;
+    width: 80%;
+    height: 15%;
+    margin-top: 10%;
+
+    button {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-color: transparent;
+        font-size: 1.2rem;
+        font-weight: 500;
+        font-stretch: semi-expanded;
+        color: white;
+        background-color: rgb(168, 168, 168);
+    }
+}
+
+.login-with-button {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    padding: 2.5% 0;
+    border: 1px solid black;
+    border-radius: 100px;
+
+    svg {
+        font-size: 1.1rem;
+        margin-left: 2%;
+        transform: translateY(15%) ;
+    }
+}
+.login-with-button + .login-with-button {
+    margin-top: 4%;
+}

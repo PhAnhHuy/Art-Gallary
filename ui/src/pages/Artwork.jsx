@@ -37,7 +37,12 @@ function Artwork() {
                         <div>Sold for 2000$</div>
                         </div>
 
-                        <div className='flex justify-center items-center bg-black text-white h-10 w-full rounded-full'>Buy Now</div>
+                        <div 
+                            className='flex justify-center items-center bg-black text-white h-10 w-full rounded-full cursor-pointer'
+                            onClick={() => navigate('/checkout')}
+                        >
+                            Buy Now
+                        </div>
                     </div>
 
                     <img 
@@ -58,7 +63,12 @@ function Artwork() {
                         <div>Sold for 2000$</div>
                         </div>
 
-                        <div className='flex justify-center items-center bg-black text-white h-10 w-full rounded-full'>Buy Now</div>
+                        <div 
+                            className='flex justify-center items-center bg-black text-white h-10 w-full rounded-full cursor-pointer'
+                            onClick={() => navigate('/checkout')}
+                        >
+                            Buy Now
+                        </div>
                     </div>
 
                     <img 
@@ -79,7 +89,12 @@ function Artwork() {
                         <div>Sold for 2000$</div>
                         </div>
 
-                        <div className='flex justify-center items-center bg-black text-white h-10 w-full rounded-full'>Buy Now</div>
+                        <div 
+                            className='flex justify-center items-center bg-black text-white h-10 w-full rounded-full cursor-pointer'
+                            onClick={() => navigate('/checkout')}
+                        >
+                            Buy Now
+                        </div>
                     </div>
 
                     <img 
