@@ -1,8 +1,8 @@
 import { useLocation } from 'react-router-dom';
 function Navbar() {
     const location = useLocation();
-    const user = true;
-    const admin = true;
+    const user = false;
+    const admin = false;
     // const [menu, setMenu] = useState('home');
     if (location.pathname === '/artworks' || location.pathname === '/room' || location.pathname === '/about') {
         return null;
