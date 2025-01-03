@@ -39,16 +39,16 @@ function Artist() {
                         </div>
                     </div>
                     <div className="flex flex-col gap-5 items-center justify-center pt-14">
-                        <img src="https://framerusercontent.com/images/hGcgaav51aAjkVOcOh5R0OozPUA.jpg"
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Makoto_Aida_2012.jpg"
                              alt="avatar pic"
                              className='w-52 h-52 object-cover cursor-pointer'
                         />
                         <div className="text-3xl">
-                            Kehinde Wiley
+                            Makoto Aida
                         </div>
                     </div>
                     <div className="flex flex-col gap-5 items-center justify-center pt-14">
-                        <img src="https://framerusercontent.com/images/hGcgaav51aAjkVOcOh5R0OozPUA.jpg"
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKlcJZ3GhZD8n7VTx6QHLFfh_kNBQZfkC7DkBDAOk9FDOGC7JLsnglp9mpIBEthhuvfntcKAAkd8qPQCjs3IMOTw"
                              alt="avatar pic"
                              className='w-52 h-52 object-cover cursor-pointer'
                         />
@@ -57,7 +57,7 @@ function Artist() {
                         </div>
                     </div>
                     <div className="flex flex-col gap-5 items-center justify-center pt-14">
-                        <img src="https://framerusercontent.com/images/hGcgaav51aAjkVOcOh5R0OozPUA.jpg"
+                        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRqABsDCvwOhswMXBiivv-wPGaj2JPbLnby38IyMmAT7-YITAI8l6CMu09mieRcv-rUiomGESj1P_FWoxpuLmmeHg"
                              alt="avatar pic"
                              className='w-52 h-52 object-cover cursor-pointer'
                         />

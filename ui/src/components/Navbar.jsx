@@ -4,7 +4,7 @@ function Navbar() {
     const user = true;
     const admin = true;
     // const [menu, setMenu] = useState('home');
-    if (location.pathname === '/artworks') {
+    if (location.pathname === '/artworks' || location.pathname === '/room' || location.pathname === '/about') {
         return null;
     }
 
