@@ -1,20 +1,19 @@
 import { useLocation } from 'react-router-dom';
-
 function Navbar() {
     const location = useLocation();
     const user = false;
-    const admin = true;
+    const admin = false;
     // const [menu, setMenu] = useState('home');
-    if (location.pathname === '/artworks') {
+    if (location.pathname === '/artworks' || location.pathname === '/room' || location.pathname === '/about') {
         return null;
     }
 
 
     return (
-        <nav className="fixed top-0 left-0 right-0 px-72 bg-white">
+        <nav className="fixed top-0 left-0 right-0 px-40 bg-white">
             <div className="max-w-screen-xl flex justify-between items-center py-5">
-                <a href='/' className='text-3xl hover:underline'>
-                    3TL
+                <a href='/' className='text-2xl font-semibold hover:underline'>
+                    Art Gallery
                 </a>
                 {user ? (
                     <ul className="flex justify-between items-center gap-20">

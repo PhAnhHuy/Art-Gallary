@@ -6,7 +6,7 @@ function Hero() {
     const navigate = useNavigate();
 
     return (
-        <div className="h-[calc(100vh-80px)] mt-[80px] px-72 flex flex-row items-center justify-between">
+        <div className="h-[calc(100vh-80px)] mt-[80px] px-40 flex flex-row items-center justify-between">
             <div className="flex flex-col gap-5 justify-center">
                 <div>
                     <div className='flex items-center gap-5'>
@@ -23,7 +23,7 @@ function Hero() {
                 </div>
             </div>
             <div className="flex justify-center items-center">
-                <img src="https://framerusercontent.com/images/hGcgaav51aAjkVOcOh5R0OozPUA.jpg" alt="" className='w-[300px]'/>
+                <img src="https://framerusercontent.com/images/hGcgaav51aAjkVOcOh5R0OozPUA.jpg" alt="" className='w-[350px]'/>
             </div>
         </div>
     );
