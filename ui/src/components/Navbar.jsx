@@ -1,8 +1,9 @@
-import { useLocation } from 'react-router-dom';
-function Navbar() {
+import { Link, useLocation } from 'react-router-dom';
+function Navbar({ user }) {
     const location = useLocation();
-    const user = false;
-    const admin = false;
+    console.log(user);
+    
+    const admin = (user === 'admin') ? true : false;
     // const [menu, setMenu] = useState('home');
     if (location.pathname === '/artworks' || location.pathname === '/room' || location.pathname === '/about') {
         return null;
@@ -12,21 +13,21 @@ function Navbar() {
     return (
         <nav className="fixed top-0 left-0 right-0 px-40 bg-white">
             <div className="max-w-screen-xl flex justify-between items-center py-5">
-                <a href='/' className='text-2xl font-semibold hover:underline'>
+                <Link to='/' className='text-2xl font-semibold hover:underline'>
                     Art Gallery
-                </a>
+                </Link>
                 {user ? (
                     <ul className="flex justify-between items-center gap-20">
                     <li>
-                        <a href='/artists' className='text-2xl hover:underline'>
+                        <Link to='/artists' className='text-2xl hover:underline'>
                             Artists
-                        </a>
+                        </Link>
                     </li>
                     {admin ? (
                         <li>
-                            <a href='/admin' className='text-2xl hover:underline'>
+                            <Link to='/admin' className='text-2xl hover:underline'>
                                 Admin
-                            </a>
+                            </Link>
                         </li>
                     ) : null}
                     <li>
@@ -38,14 +39,14 @@ function Navbar() {
                 ) : (
                     <ul className="flex justify-between items-center gap-20">
                     <li>
-                        <a href='/artists' className='text-2xl hover:underline'>
+                        <Link to='/artists' className='text-2xl hover:underline'>
                             Artists
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href='/login' className='text-2xl hover:underline'>
+                        <Link to='/login' className='text-2xl hover:underline'>
                             Login
-                        </a>
+                        </Link>
                     </li>
                 </ul>
                 )}

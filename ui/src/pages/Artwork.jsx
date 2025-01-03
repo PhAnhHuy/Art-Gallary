@@ -2,8 +2,9 @@ import { Icons } from '../components/Icons';
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
 import  Painting  from '../components/Painting.jsx';
+import { FaAddressCard, FaStar } from 'react-icons/fa';
 
-function Artwork() {
+function Artwork({ user }) {
     const navigate = useNavigate();
     return (
         <section className="h-full flex flex-col justify-start items-start px-40">
@@ -39,13 +40,16 @@ function Artwork() {
                 <div className="flex flex-row justify-between items-start w-full py-5">
                     <div className="flex flex-col justify-between items-start gap-20 pl-3">
                         <div className='flex flex-col gap-2'>
-                        <div className='text-4xl font-semibold'>Timelines</div>
-                        <div className='text-xl'>Sold for 2000$</div>
+                            <div className='flex gap-4'>
+                                <div className='text-4xl font-semibold'>Timelines</div>
+                                <div className='text-4xl font-semibold cursor-pointer' onClick={(e) => (e.target.style.color = '#eab308')}><FaStar /></div>
+                            </div>
+                            <div className='text-xl'>Sold for 2000$</div>
                         </div>
 
                         <div 
                             className='flex justify-center items-center bg-black text-white h-14 w-72 rounded-full cursor-pointer'
-                            onClick={() => navigate('/checkout')}
+                            onClick={() => { if(user) navigate('/checkout')}}
                         >
                             Buy Now
                         </div>
@@ -63,13 +67,16 @@ function Artwork() {
                 <div className="flex flex-row justify-between items-start w-full py-5">
                     <div className="flex flex-col justify-between items-start gap-20 pl-3">
                         <div className='flex flex-col gap-2'>
-                            <div className='text-4xl font-semibold'>Timelines</div>
+                            <div className='flex gap-4'>
+                                <div className='text-4xl font-semibold'>Timelines</div>
+                                <div className='text-4xl font-semibold cursor-pointer' onClick={(e) => (e.target.style.color = '#eab308')}><FaStar /></div>
+                            </div>
                             <div className='text-xl'>Sold for 2000$</div>
                         </div>
 
                         <div 
                             className='flex justify-center items-center bg-black text-white h-14 w-72 rounded-full cursor-pointer'
-                            onClick={() => navigate('/checkout')}
+                            onClick={() => { if(user) navigate('/checkout')}}
                         >
                             Buy
                             Now
@@ -91,13 +98,16 @@ function Artwork() {
                 <div className="flex flex-row justify-between items-start w-full py-5">
                     <div className="flex flex-col justify-between items-start gap-20 pl-3">
                         <div className='flex flex-col gap-2'>
-                            <div className='text-4xl font-semibold'>Timelines</div>
+                            <div className='flex gap-4'>
+                                <div className='text-4xl font-semibold'>Timelines</div>
+                                <div className='text-4xl font-semibold cursor-pointer' onClick={(e) => (e.target.style.color = '#eab308')}><FaStar /></div>
+                            </div>
                             <div className='text-xl'>Sold for 2000$</div>
                         </div>
 
                         <div 
                             className='flex justify-center items-center bg-black text-white h-14 w-72 rounded-full cursor-pointer'
-                            onClick={() => navigate('/checkout')}
+                            onClick={() => { if(user) navigate('/checkout')}}
                         >
                             Buy
                             Now

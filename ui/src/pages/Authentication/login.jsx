@@ -4,12 +4,37 @@ import divider from '../../assets/divider.png';
 import className from 'classnames/bind';
 import styles from './authen.module.css';
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const cx = className.bind(styles);
 
-function Login() {
+function Login({ setUser }) {
 
     const navigate = useNavigate();
+    const [formInfo, setFormInfo] = useState({ email: '', password: ''});
+
+    const handleFormChange = (e) => {
+        const { name, value } = e.target;
+
+        e.target.className = cx('');
+
+        setFormInfo((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setUser('user')
+
+        if ((formInfo.email === 'admin') && formInfo.password === 'admin') {
+            setUser('admin')
+        }
+
+        navigate('/')
+        
+    }
 
     return (
         <>
@@ -33,7 +58,7 @@ function Login() {
                     <div className={cx('content-wrapper')}>
                         <form 
                             className="h-full w-[25%] flex flex-col justify-center items-center"
-                            onSubmit={(e) => {e.preventDefault(); navigate('/')}}
+                            onSubmit={handleSubmit}
                         >
                             <div className={cx('input-container')}>
                                 <label for="email">Email address</label>
@@ -42,6 +67,7 @@ function Login() {
                                     id='email'
                                     name='email'
                                     autoComplete='off'
+                                    onChange={handleFormChange}
                                 />
                             </div>
                             <div className={cx('input-container')}>
@@ -51,6 +77,7 @@ function Login() {
                                     id='password'
                                     name='password'
                                     autoComplete='off'
+                                    onChange={handleFormChange}
                                 />
                             </div>
                             <div className={cx('form-button')}>
